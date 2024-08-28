@@ -24,6 +24,7 @@ NODES=(
 )
 
 CHECKPOINT_MODELS=(
+"https://civitai.com/api/download/models/128713?type=Model&format=SafeTensor&size=pruned&fp=fp16&token=c1a3270f7ed25469dffaced28e6e2b5d"
 )
 
 UNET_MODELS=(
@@ -31,7 +32,7 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    #"https://civitai.com/api/download/models/16576"
+    "https://huggingface.co/guoyww/animatediff/resolve/main/v3_sd15_adapter.ckpt"
 )
 
 VAE_MODELS=(
