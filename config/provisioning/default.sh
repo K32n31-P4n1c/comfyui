@@ -38,6 +38,7 @@ UNET_MODELS=(
 LORA_MODELS=(
     "https://huggingface.co/guoyww/animatediff/resolve/main/v3_sd15_adapter.ckpt"
     "https://civitai.com/models/176435/picture-books-children-cartoon"
+    "https://civitai.com/api/download/models/87153?type=Model&format=SafeTensor&token=c1a3270f7ed25469dffaced28e6e2b5d"
 )
 
 VAE_MODELS=(
