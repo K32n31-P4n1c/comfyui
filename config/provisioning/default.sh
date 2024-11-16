@@ -31,6 +31,11 @@ CHECKPOINT_MODELS=(
     "https://civitai.com/api/download/models/274039?type=Model&format=SafeTensor&size=pruned&fp=fp16&token=c1a3270f7ed25469dffaced28e6e2b5d"
 )
 
+CLIP_MODELS=(
+    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors"
+    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors"
+)
+
 UNET_MODELS=(
 
 )
