@@ -23,6 +23,8 @@ NODES=(
     "https://github.com/cubiq/ComfyUI_essentials"
     "https://github.com/rgthree/rgthree-comfy"
     "https://github.com/jags111/efficiency-nodes-comfyui"
+    "https://github.com/kijai/ComfyUI-KJNodes"
+    "https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
 )
 
 CHECKPOINT_MODELS=(
