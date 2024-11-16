@@ -37,6 +37,8 @@ CHECKPOINT_MODELS=(
     #"https://civitai.com/api/download/models/502362?type=Model&format=SafeTensor&size=pruned&fp=fp16&token=c1a3270f7ed25469dffaced28e6e2b5d"
     #WildCardX-XL-Fusion
     "https://civitai.com/api/download/models/345685?type=Model&format=SafeTensor&size=full&fp=fp16&token=c1a3270f7ed25469dffaced28e6e2b5d"
+    #FLUX
+    "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
 )
 
 UNET_MODELS=(
