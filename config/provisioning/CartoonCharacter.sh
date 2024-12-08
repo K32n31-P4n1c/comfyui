@@ -25,6 +25,8 @@ NODES=(
 )
 
 CHECKPOINT_MODELS=(
+    #FLUX
+    #"https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
     #DreamShaper8
     #"https://civitai.com/api/download/models/128713?type=Model&format=SafeTensor&size=pruned&fp=fp16&token=c1a3270f7ed25469dffaced28e6e2b5d"
     #JaggerReborn
@@ -37,8 +39,10 @@ CHECKPOINT_MODELS=(
     #"https://civitai.com/api/download/models/502362?type=Model&format=SafeTensor&size=pruned&fp=fp16&token=c1a3270f7ed25469dffaced28e6e2b5d"
     #WildCardX-XL-Fusion
     "https://civitai.com/api/download/models/345685?type=Model&format=SafeTensor&size=full&fp=fp16&token=c1a3270f7ed25469dffaced28e6e2b5d"
-    #FLUX
-    "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
+    # Samaritan 3d Cartoon
+    "https://civitai.com/api/download/models/144566?type=Model&format=SafeTensor&size=full&fp=fp16&token=c1a3270f7ed25469dffaced28e6e2b5d"
+    # _CHEYENNE_
+    "https://civitai.com/api/download/models/1099629?type=Model&format=SafeTensor&size=full&fp=fp16&token=c1a3270f7ed25469dffaced28e6e2b5d"
 )
 
 UNET_MODELS=(
@@ -46,9 +50,9 @@ UNET_MODELS=(
 )
 
 LORA_MODELS=(
-    "https://huggingface.co/guoyww/animatediff/resolve/main/v3_sd15_adapter.ckpt"
-    
+    # children's picture books,crayon paintings,blush
     "https://civitai.com/models/176435/picture-books-children-cartoon"
+    #
     "https://civitai.com/api/download/models/87153?type=Model&format=SafeTensor&token=c1a3270f7ed25469dffaced28e6e2b5d"
 )
 
@@ -65,11 +69,11 @@ ESRGAN_MODELS=(
 
 CONTROLNET_MODELS=(
     "https://huggingface.co/thibaud/controlnet-openpose-sdxl-1.0/resolve/main/OpenPoseXL2.safetensors"
-    "https://huggingface.co/TheMistoAI/MistoLine/resolve/main/mistoLine_fp16.safetensors"
-    "https://huggingface.co/crishhh/animatediff_controlnet/resolve/main/controlnet_checkpoint.ckpt"
+    #"https://huggingface.co/TheMistoAI/MistoLine/resolve/main/mistoLine_fp16.safetensors"
+    #"https://huggingface.co/crishhh/animatediff_controlnet/resolve/main/controlnet_checkpoint.ckpt"
     "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_canny_mid.safetensors"
     "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_depth_mid.safetensors?download"
-    "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/t2i-adapter_diffusers_xl_openpose.safetensors"
+    #"https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/t2i-adapter_diffusers_xl_openpose.safetensors"
     "https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_canny-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_depth-fp16.safetensors"
     "https://huggingface.co/kohya-ss/ControlNet-diff-modules/resolve/main/diff_control_sd15_depth_fp16.safetensors"
@@ -79,11 +83,11 @@ CONTROLNET_MODELS=(
     "https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_openpose-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_scribble-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_seg-fp16.safetensors"
-    "https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_canny-fp16.safetensors"
+    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_canny-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_color-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_depth-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_keypose-fp16.safetensors"
-    "https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_openpose-fp16.safetensors"
+    #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_openpose-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_seg-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_sketch-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/t2iadapter_style-fp16.safetensors"
