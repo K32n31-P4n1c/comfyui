@@ -29,7 +29,6 @@ NODES=(
 
 CHECKPOINT_MODELS=(
     #FLUX
-    "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/flux1-dev.safetensors"
     #"https://civitai.com/api/download/models/691639?type=Model&format=SafeTensor&size=pruned&fp=fp8&token=c1a3270f7ed25469dffaced28e6e2b5d"
 )
 
@@ -39,9 +38,11 @@ CLIP_MODELS=(
 )
 
 UNET_MODELS=(
+    "https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/flux1-dev.safetensors"
 )
 
 VAE_MODELS=(
+    "https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/ae.safetensors"
 )
 
 LORA_MODELS=(
