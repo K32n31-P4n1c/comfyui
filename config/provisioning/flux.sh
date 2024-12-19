@@ -45,6 +45,7 @@ VAE_MODELS=(
 )
 
 LORA_MODELS=(
+    "https://civitai.com/models/433138/ghibli-style-flux-and-pdxl?modelVersionId=755852&token=c1a3270f7ed25469dffaced28e6e2b5d"
 )
 
 ESRGAN_MODELS=(
