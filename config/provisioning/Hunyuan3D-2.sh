@@ -1,9 +1,5 @@
 #!/bin/bash
-
 # This file will be sourced in init.sh
-
-# https://raw.githubusercontent.com/ai-dock/comfyui/main/config/provisioning/default.sh
-
 # Packages are installed after nodes so we can fix them...
 
 #DEFAULT_WORKFLOW="https://..."
@@ -75,7 +71,7 @@ function provisioning_start() {
         "${WORKSPACE}/storage/stable_diffusion/models/ckpt" \
         "${CHECKPOINT_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/diffusion_models" \
+        "/workspace/ComfyUI/models/diffusion_models" \
         "${DIFFUSION_MODELS[@]}"
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/unet" \
