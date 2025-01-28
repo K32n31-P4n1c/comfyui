@@ -26,10 +26,15 @@ NODES=(
     "https://github.com/kijai/ComfyUI-KJNodes"
     "https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
     "https://github.com/filliptm/ComfyUI_Fill-Nodes"
+    "https://github.com/kijai/ComfyUI-Hunyuan3DWrapper"
 )
 
 CHECKPOINT_MODELS=(
-    "https://civitai.com/api/download/models/916744?type=Model&format=SafeTensor&size=full&fp=fp16&token=c1a3270f7ed25469dffaced28e6e2b5d"
+
+)
+
+DIFFUSION_MODELS=(
+    "https://huggingface.co/Kijai/Hunyuan3D-2_safetensors/resolve/main/hunyuan3d-dit-v2-0-fp16.safetensors"
 )
 
 CLIP_MODELS=(
@@ -69,6 +74,9 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/ckpt" \
         "${CHECKPOINT_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/diffusion_models" \
+        "${DIFFUSION_MODELS[@]}"
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/unet" \
         "${UNET_MODELS[@]}"
