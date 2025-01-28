@@ -5,8 +5,8 @@
 #DEFAULT_WORKFLOW="https://..."
 
 APT_PACKAGES=(
-    #"package-1"
-    #"package-2"
+    "build-essential"
+    "cuda-toolkit-12-1"
 )
 
 PIP_PACKAGES=(
