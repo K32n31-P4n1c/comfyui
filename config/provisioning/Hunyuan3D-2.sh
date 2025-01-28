@@ -4,6 +4,9 @@
 
 #DEFAULT_WORKFLOW="https://..."
 
+###################################
+# 1. Define which apt packages you want:
+###################################
 APT_PACKAGES=(
     "build-essential"
     "cuda-toolkit-12-1"
@@ -44,8 +47,6 @@ LORA_MODELS=(
 )
 
 VAE_MODELS=(
-    "https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors"
-    "https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
 )
 
 ESRGAN_MODELS=(
@@ -54,9 +55,30 @@ ESRGAN_MODELS=(
 CONTROLNET_MODELS=(
 )
 
-### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
-
+###################################
+# 2. Main provisioning function
+###################################
 function provisioning_start() {
+
+    ########################################################################
+    # ADDED SECTION: Set up CUDA 12.1 repository for Ubuntu 22.04
+    # (Adjust if you're using a different Ubuntu version or CUDA version)
+    ########################################################################
+
+    echo "[INFO] Setting up CUDA 12.1 repository..."
+    sudo apt-get update
+    sudo apt-get install -y --no-install-recommends wget
+
+    # Download the repository pin
+    wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-ubuntu2204.pin
+    sudo mv cuda-ubuntu2204.pin /etc/apt/preferences.d/cuda-repository-pin-600
+
+    # Download and install the CUDA repo .deb
+    wget https://developer.download.nvidia.com/compute/cuda/12.1.1/local_installers/cuda-repo-ubuntu2204-12-1-local_12.1.1-1_amd64.deb
+    sudo dpkg -i cuda-repo-ubuntu2204-12-1-local_12.1.1-1_amd64.deb
+    sudo cp /var/cuda-repo-ubuntu2204-12-1-local/cuda-*-keyring.gpg /usr/share/keyrings/
+
+
     if [[ ! -d /opt/environments/python ]]; then 
         export MAMBA_BASE=true
     fi
@@ -101,6 +123,9 @@ function pip_install() {
 
 function provisioning_get_apt_packages() {
     if [[ -n $APT_PACKAGES ]]; then
+             # We add apt-get update here once more,
+            # so it refreshes the new NVIDIA repo before installing:
+            sudo apt-get update
             sudo $APT_INSTALL ${APT_PACKAGES[@]}
     fi
 }
@@ -216,4 +241,7 @@ function provisioning_download() {
     fi
 }
 
+###################################
+# 3. Kick off provisioning
+###################################
 provisioning_start
