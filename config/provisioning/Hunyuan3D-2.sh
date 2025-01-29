@@ -8,8 +8,6 @@
 # 1. Define which apt packages you want:
 ###################################
 APT_PACKAGES=(
-    "build-essential"
-    "cuda-toolkit-12-1"
 )
 
 PIP_PACKAGES=(
