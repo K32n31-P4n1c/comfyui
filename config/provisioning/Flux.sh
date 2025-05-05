@@ -101,6 +101,9 @@ function provisioning_start() {
         "/workspace/ComfyUI/models/diffusion_models" \
         "${DIFFUSION_MODELS[@]}"
     provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/clip" \
+        "${CLIP_MODELS[@]}"
+    provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/unet" \
         "${UNET_MODELS[@]}"
     provisioning_get_models \
