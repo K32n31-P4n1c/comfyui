@@ -47,7 +47,8 @@ LORA_MODELS=(
 )
 
 VAE_MODELS=(
-    "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors"
+    # "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors"
+    "https://civitai.com/api/download/models/711305?type=Model&format=SafeTensor&token=c1a3270f7ed25469dffaced28e6e2b5d"
 )
 
 ESRGAN_MODELS=(
