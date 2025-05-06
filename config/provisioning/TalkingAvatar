@@ -25,11 +25,14 @@ NODES=(
     "https://github.com/jags111/efficiency-nodes-comfyui"
     "https://github.com/kijai/ComfyUI-KJNodes"
     "https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
-    https://github.com/filliptm/ComfyUI_Fill-Nodes
+    "https://github.com/filliptm/ComfyUI_Fill-Nodes"
+    "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
+    "https://github.com/yolain/ComfyUI-Easy-Use"
+    "https://github.com/WASasquatch/was-node-suite-comfyui"
 )
 
 CHECKPOINT_MODELS=(
-    "https://civitai.com/api/download/models/916744?type=Model&format=SafeTensor&size=full&fp=fp16&token=c1a3270f7ed25469dffaced28e6e2b5d"
+    "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/resolve/main/svd_xt.safetensors"
 )
 
 CLIP_MODELS=(
@@ -43,8 +46,6 @@ LORA_MODELS=(
 )
 
 VAE_MODELS=(
-    "https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors"
-    "https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
 )
 
 ESRGAN_MODELS=(
