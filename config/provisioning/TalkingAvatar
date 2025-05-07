@@ -14,7 +14,6 @@ APT_PACKAGES=(
 )
 
 PIP_PACKAGES=(
-    "gdown"
 )
 
 NODES=(
@@ -35,10 +34,21 @@ CHECKPOINT_MODELS=(
     "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt-1-1/resolve/main/svd_xt_1_1.safetensors"
 )
 
-SONIC_MODELS=(
+SONIC_ROOT_MODELS=(
+    "https://huggingface.co/LeonJoe13/Sonic/resolve/main/Sonic/audio2bucket.pth"
+    "https://huggingface.co/LeonJoe13/Sonic/resolve/main/Sonic/audio2token.pth"
+    "https://huggingface.co/LeonJoe13/Sonic/resolve/main/Sonic/unet.pth"
+    "https://huggingface.co/LeonJoe13/Sonic/resolve/main/yoloface_v5m.pt"
+)
+
+SONIC_WHISPER_MODELS=(
     "https://huggingface.co/openai/whisper-tiny/resolve/main/config.json"
     "https://huggingface.co/openai/whisper-tiny/resolve/main/model.safetensors"
     "https://huggingface.co/openai/whisper-tiny/resolve/main/preprocessor_config.json"
+)
+
+SONIC_RIFE_MODELS=(
+    "https://huggingface.co/LeonJoe13/Sonic/resolve/main/RIFE/flownet.pkl"
 )
 
 CLIP_MODELS=(
@@ -80,8 +90,14 @@ function provisioning_start() {
         "${WORKSPACE}/storage/stable_diffusion/models/unet" \
         "${UNET_MODELS[@]}"
     provisioning_get_models \
+        "/workspace/ComfyUI/models/sonic" \
+        "${SONIC_ROOT_MODELS[@]}"
+    provisioning_get_models \
         "/workspace/ComfyUI/models/sonic/whisper-tiny" \
-        "${SONIC_MODELS[@]}"
+        "${SONIC_WHISPER_MODELS[@]}"
+    provisioning_get_models \
+        "/workspace/ComfyUI/models/sonic/RIFE" \
+        "${SONIC_RIFE_MODELS[@]}"
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/lora" \
         "${LORA_MODELS[@]}"
@@ -94,15 +110,6 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
-
-    # Download Google Drive folders using gdown
-    echo "[INFO] Downloading Sonic models from Google Drive..."
-
-    mkdir -p "/workspace/ComfyUI/models/sonic"
-    gdown --folder https://drive.google.com/drive/folders/1jI32B-2JX17seSGG0-MnZgUhCMHCEZlx -O "/workspace/ComfyUI/models/sonic" --verbose
-
-    mkdir -p "/workspace/ComfyUI/models/sonic/RIFE"
-    gdown https://drive.google.com/uc?id=1UnSds5DhPRZu4C23I4uOmmahH0J3Dkwl -O /workspace/ComfyUI/models/sonic/RIFE/flownet.pkl
 
     provisioning_print_end
 }
