@@ -14,8 +14,7 @@ APT_PACKAGES=(
 )
 
 PIP_PACKAGES=(
-    #"package-1"
-    #"package-2"
+    "gdown"
 )
 
 NODES=(
@@ -34,6 +33,12 @@ NODES=(
 
 CHECKPOINT_MODELS=(
     "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/resolve/main/svd_xt.safetensors"
+)
+
+SONIC_MODELS=(
+    "https://huggingface.co/openai/whisper-tiny/resolve/main/config.json"
+    "https://huggingface.co/openai/whisper-tiny/resolve/main/model.safetensors"
+    "https://huggingface.co/openai/whisper-tiny/resolve/main/preprocessor_config.json"
 )
 
 CLIP_MODELS=(
@@ -75,6 +80,9 @@ function provisioning_start() {
         "${WORKSPACE}/storage/stable_diffusion/models/unet" \
         "${UNET_MODELS[@]}"
     provisioning_get_models \
+        "/workspace/ComfyUI/models/sonic/whisper-tiny" \
+        "${SONIC_MODELS[@]}"
+    provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/lora" \
         "${LORA_MODELS[@]}"
     provisioning_get_models \
@@ -88,6 +96,15 @@ function provisioning_start() {
         "${ESRGAN_MODELS[@]}"
     provisioning_print_end
 }
+
+# Download Google Drive folders using gdown
+    echo "[INFO] Downloading Sonic models from Google Drive..."
+
+    mkdir -p "/workspace/ComfyUI/models/sonic"
+    gdown --folder https://drive.google.com/drive/folders/1jI32B-2JX17seSGG0-MnZgUhCMHCEZlx -O "/workspace/ComfyUI/models/sonic"
+
+    mkdir -p "/workspace/ComfyUI/models/sonic/RIFE"
+    gdown --folder https://drive.google.com/drive/folders/1QIIDvCDU-rp1ZB8qDA6NQqVn8F9WYMhE -O "/workspace/ComfyUI/models/sonic/RIFE"
 
 function pip_install() {
     if [[ -z $MAMBA_BASE ]]; then
