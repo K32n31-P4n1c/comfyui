@@ -102,7 +102,7 @@ function provisioning_start() {
     gdown --folder https://drive.google.com/drive/folders/1jI32B-2JX17seSGG0-MnZgUhCMHCEZlx -O "/workspace/ComfyUI/models/sonic" --verbose
 
     mkdir -p "/workspace/ComfyUI/models/sonic/RIFE"
-    gdown --folder https://drive.google.com/drive/folders/1QIIDvCDU-rp1ZB8qDA6NQqVn8F9WYMhE -O "/workspace/ComfyUI/models/sonic/RIFE" --verbose
+    gdown https://drive.google.com/uc?id=1UnSds5DhPRZu4C23I4uOmmahH0J3Dkwl -O /workspace/ComfyUI/models/sonic/RIFE/flownet.pkl
 
     provisioning_print_end
 }
