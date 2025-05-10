@@ -52,19 +52,25 @@ SONIC_RIFE_MODELS=(
 )
 
 CLIP_MODELS=(
+    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors"
+    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors"
 )
 
 UNET_MODELS=(
-
+    "https://civitai.com/api/download/models/691639?type=Model&format=SafeTensor&size=full&fp=fp32&token=c1a3270f7ed25469dffaced28e6e2b5d"
 )
 
 LORA_MODELS=(
 )
 
 VAE_MODELS=(
+    "https://civitai.com/api/download/models/711305?type=Model&format=SafeTensor&token=c1a3270f7ed25469dffaced28e6e2b5d"
 )
 
 ESRGAN_MODELS=(
+    "https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4.pth"
+    "https://huggingface.co/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth"
+    "https://huggingface.co/Akumetsu971/SD_Anime_Futuristic_Armor/resolve/main/4x_NMKD-Siax_200k.pth"
 )
 
 CONTROLNET_MODELS=(
