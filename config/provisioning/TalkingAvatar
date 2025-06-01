@@ -47,6 +47,7 @@ DICE_ROOT_MODELS=(
     "https://huggingface.co/EEEELY/DICE-Talk/resolve/main/DICE-Talk/emo_model.pth"
     "https://huggingface.co/EEEELY/DICE-Talk/resolve/main/DICE-Talk/pose_guider.pth"
     "https://huggingface.co/EEEELY/DICE-Talk/resolve/main/DICE-Talk/unet.pth"
+    "https://huggingface.co/EEEELY/DICE-Talk/resolve/main/yoloface_v5m.pt"
 )
 
 SONIC_WHISPER_MODELS=(
