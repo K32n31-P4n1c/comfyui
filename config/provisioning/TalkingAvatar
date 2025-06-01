@@ -42,6 +42,13 @@ SONIC_ROOT_MODELS=(
     "https://huggingface.co/LeonJoe13/Sonic/resolve/main/yoloface_v5m.pt"
 )
 
+DICE_ROOT_MODELS=(
+    "https://huggingface.co/EEEELY/DICE-Talk/resolve/main/DICE-Talk/audio_linear.pth"
+    "https://huggingface.co/EEEELY/DICE-Talk/resolve/main/DICE-Talk/emo_model.pth"
+    "https://huggingface.co/EEEELY/DICE-Talk/resolve/main/DICE-Talk/pose_guider.pth"
+    "https://huggingface.co/EEEELY/DICE-Talk/resolve/main/DICE-Talk/unet.pth"
+)
+
 SONIC_WHISPER_MODELS=(
     "https://huggingface.co/openai/whisper-tiny/resolve/main/config.json"
     "https://huggingface.co/openai/whisper-tiny/resolve/main/model.safetensors"
@@ -100,6 +107,9 @@ function provisioning_start() {
     provisioning_get_models \
         "/workspace/ComfyUI/models/sonic" \
         "${SONIC_ROOT_MODELS[@]}"
+    provisioning_get_models \
+        "/workspace/ComfyUI/models/dice_talk" \
+        "${DICE_ROOT_MODELS[@]}"
     provisioning_get_models \
         "/workspace/ComfyUI/models/sonic/whisper-tiny" \
         "${SONIC_WHISPER_MODELS[@]}"
