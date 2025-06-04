@@ -28,7 +28,7 @@ NODES=(
     "https://github.com/yolain/ComfyUI-Easy-Use"
     "https://github.com/WASasquatch/was-node-suite-comfyui"
     "https://github.com/smthemex/ComfyUI_Sonic"
-    "https://github.com/toto222/DICE-Talk"
+    "https://github.com/smthemex/ComfyUI_DICE_Talk"
 )
 
 CHECKPOINT_MODELS=(
