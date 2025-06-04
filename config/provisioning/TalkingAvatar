@@ -33,6 +33,7 @@ NODES=(
 
 CHECKPOINT_MODELS=(
     "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt-1-1/resolve/main/svd_xt_1_1.safetensors"
+    "https://huggingface.co/Comfy-Org/flux1-dev/resolve/main/flux1-dev-fp8.safetensors"
 )
 
 SONIC_ROOT_MODELS=(
@@ -66,7 +67,6 @@ CLIP_MODELS=(
 )
 
 UNET_MODELS=(
-    "https://civitai.com/api/download/models/691639?type=Model&format=SafeTensor&size=full&fp=fp32&token=c1a3270f7ed25469dffaced28e6e2b5d"
 )
 
 LORA_MODELS=(
