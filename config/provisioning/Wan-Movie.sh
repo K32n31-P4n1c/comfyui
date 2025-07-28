@@ -6,7 +6,7 @@
 
 # Packages are installed after nodes so we can fix them...
 
-DEFAULT_WORKFLOW="https://raw.githubusercontent.com/K32n31-P4n1c/comfyui/refs/heads/main/config/workflows/%5B%20LivePortrait%20%5D%20Audio-Vid%20Sonic.json"
+DEFAULT_WORKFLOW=""
 
 APT_PACKAGES=(
     #"package-1"
@@ -20,13 +20,14 @@ NODES=(
     "https://github.com/ltdrdata/ComfyUI-Manager"
     "https://github.com/cubiq/ComfyUI_essentials"
     "https://github.com/rgthree/rgthree-comfy"
-    "https://github.com/jags111/efficiency-nodes-comfyui"
     "https://github.com/kijai/ComfyUI-KJNodes"
     "https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
     "https://github.com/filliptm/ComfyUI_Fill-Nodes"
     "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
     "https://github.com/yolain/ComfyUI-Easy-Use"
     "https://github.com/WASasquatch/was-node-suite-comfyui"
+    "https://github.com/kijai/ComfyUI-WanVideoWrapper"
+    "https://github.com/kijai/ComfyUI-Florence2"
 )
 
 CHECKPOINT_MODELS=(
