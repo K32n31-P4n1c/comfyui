@@ -35,12 +35,16 @@ DIFFUSION_MODELS=(
     "https://huggingface.co/Comfy-Org/flux1-dev/resolve/main/flux1-dev.safetensors"
     "https://huggingface.co/Comfy-Org/flux1-kontext-dev_ComfyUI/resolve/main/split_files/diffusion_models/flux1-dev-kontext_fp8_scaled.safetensors"
     "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_fp8_e4m3fn.safetensors"
+    "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/diffusion_models/wan2.1_t2v_14B_fp16.safetensors"
 )
 
 CLIP_MODELS=(
+)
+TEXT_ENCODER_MODELS=(
     "https://huggingface.co/comfyanonymous/flux_text_encoders/blob/main/clip_l.safetensors"
     "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors"
     "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors"
+    "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors"
 )
 
 UNET_MODELS=(
@@ -49,11 +53,15 @@ UNET_MODELS=(
 LORA_MODELS=(
     "https://civitai.com/api/download/models/783364?type=Model&format=SafeTensor&token=c1a3270f7ed25469dffaced28e6e2b5d"
     "https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Lightning-8steps-V1.0.safetensors"
+    "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Lightx2v/lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank64_bf16.safetensors"
+    "https://huggingface.co/htdong/Wan-Alpha_ComfyUI/resolve/main/epoch-13-1500_changed.safetensors"
 )
 
 VAE_MODELS=(
     "https://huggingface.co/Comfy-Org/Lumina_Image_2.0_Repackaged/resolve/main/split_files/vae/ae.safetensor"
     "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors"
+    "https://huggingface.co/htdong/Wan-Alpha_ComfyUI/resolve/main/wan_alpha_2.1_vae_rgb_channel.safetensors.safetensors"
+    "https://huggingface.co/htdong/Wan-Alpha_ComfyUI/resolve/main/wan_alpha_2.1_vae_alpha_channel.safetensors.safetensors"
 )
 
 ESRGAN_MODELS=(
@@ -105,6 +113,9 @@ function provisioning_start() {
     provisioning_get_models \
         "/workspace/ComfyUI/models/diffusion_models" \
         "${DIFFUSION_MODELS[@]}"
+    provisioning_get_models \
+        "/workspace/ComfyUI/models/text_encoders" \
+        "${TEXT_ENCODER_MODELS[@]}"
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/clip" \
         "${CLIP_MODELS[@]}"
