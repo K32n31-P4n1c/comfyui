@@ -25,6 +25,7 @@ NODES=(
     "https://github.com/kijai/ComfyUI-KJNodes"
     "https://github.com/ssitu/ComfyUI_UltimateSDUpscale"
     "https://github.com/filliptm/ComfyUI_Fill-Nodes"
+    "https://github.com/nunchaku-tech/ComfyUI-nunchaku"
 )
 
 CHECKPOINT_MODELS=(
@@ -32,23 +33,29 @@ CHECKPOINT_MODELS=(
 )
 
 DIFFUSION_MODELS=(
+    "https://huggingface.co/nunchaku-tech/nunchaku-flux.1-dev/resolve/main/svdq-fp4_r32-flux.1-dev.safetensors"
+    "https://huggingface.co/nunchaku-tech/nunchaku-flux.1-kontext-dev/resolve/main/svdq-fp4_r32-flux.1-kontext-dev.safetensors"
+    "https://huggingface.co/nunchaku-tech/nunchaku-flux.1-canny-dev/resolve/main/svdq-fp4_r32-flux.1-canny-dev.safetensors"
+    "https://huggingface.co/nunchaku-tech/nunchaku-qwen-image-edit-2509/resolve/main/svdq-fp4_r128-qwen-image-edit-2509-lightningv2.0-8steps.safetensors"
 )
 
 CLIP_MODELS=(
     "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors"
     "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors"
+    "https://huggingface.co/mit-han-lab/nunchaku-t5/resolve/main/awq-int4-flux.1-t5xxl.safetensors"
+    "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors"
+    
 )
 
 UNET_MODELS=(
-    "https://civitai.com/api/download/models/691639?type=Model&format=SafeTensor&size=full&fp=fp32&token=c1a3270f7ed25469dffaced28e6e2b5d"
 )
 
 LORA_MODELS=(
 )
 
 VAE_MODELS=(
-    # "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/ae.safetensors"
-    "https://civitai.com/api/download/models/711305?type=Model&format=SafeTensor&token=c1a3270f7ed25469dffaced28e6e2b5d"
+    "https://huggingface.co/Comfy-Org/Lumina_Image_2.0_Repackaged/resolve/main/split_files/vae/ae.safetensor"
+    "https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors"
 )
 
 ESRGAN_MODELS=(
